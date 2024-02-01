@@ -42,13 +42,7 @@ class DocController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $doc = $this->docService->createAndClearCache($request->validated());
 
-        return new SuccessResponse(
-            response: BannerResource::make($banner),
-            status: Response::HTTP_CREATED,
-            message: 'Banner created'
-        );
     }
 
     /**
